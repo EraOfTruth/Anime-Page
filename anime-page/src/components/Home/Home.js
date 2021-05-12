@@ -11,14 +11,19 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.home}>
-      <div className={styles.square}></div>
-            {/* <button className={styles.tourstart}>Click Here</button> */}
-
-      {/* <button className={styles.tourstart} onClick={setActive}>
-        CLICK HERE
-      </button> */}
-      <div onClick={setActive}  className={styles.image}></div>
+    <div className={styles.home_page_container}>
+      <div className={styles.home_page_center}></div>
+      <div className={styles.home_page_left}></div>
+      <div className={styles.home_page_right}></div>
+      <div className={styles.start_button}></div>
+      <div className={[styles.home, styles.home_top].join(" ")}>
+        <div className={[styles.square, styles.square_top].join(" ")}></div>
+        <div onClick={setActive} className={[styles.image, styles.image_top].join(" ")}></div>
+      </div>
+      <div className={[styles.home, styles.home_bottom].join(" ")}>
+        <div className={[styles.square, styles.square_bottom].join(" ")}></div>
+        <div onClick={setActive} className={[styles.image, styles.image_bottom].join(" ")}></div>
+      </div>
     </div>
   );
 };
